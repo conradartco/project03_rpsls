@@ -1,7 +1,10 @@
 # give automated input on gesture choices
 import random
 
-class AI():
+from player import Player
+
+class AI(Player):
     def __init__(self):
-        self.someth
         super().__init__()
+    def choice(self):
+        self.ai_choice = random.choice.self.gestures()

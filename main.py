@@ -1,3 +1,12 @@
+from game import Game
+
+
+test = Game()
+test.evaluate('Rock', 'Paper')
+
+
+
+ 
 # make at least 10 commits
 
 # properly incorporate inheritance into my game

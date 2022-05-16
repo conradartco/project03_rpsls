@@ -1,5 +1,13 @@
 # give human input on gesture choices
 
-class Human():
+from site import getsitepackages
+from player import Player
+from player import Player
+
+class Human(Player):
     def __init__(self):
-        pass
+       super().__init__()
+       def player_vs_player(self):
+           self.gesture[1]
+           pass
+       
