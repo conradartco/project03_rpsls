@@ -5,4 +5,4 @@ class Player():
          self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
          self.choice = ''
          self.wins=''
-         pass
+         

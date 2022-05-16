@@ -1,8 +1,11 @@
-from game import Game
+# from game import Game
+from ai import AI
 
+# test = Game()
+# test.random.choice(self.gestures)
 
-test = Game()
-test.evaluate('Rock', 'Paper')
+ai_player = AI()
+str(ai_player.choice())
 
 
 

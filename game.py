@@ -5,11 +5,13 @@ from player import Player
 
 class Game():
     def __init__(self):
-      
-       self.display_welcome()
-       self.display_rules()
+      player_one = Player
+      playe=Human
+      notplayer=AI
+      self.display_welcome()
+      self.display_rules()
        # self.player_input()
-       self.evaluate()
+      self.evaluate()
 
     def display_rules(self):
         print("Rules")
