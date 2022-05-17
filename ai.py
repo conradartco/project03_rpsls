@@ -6,8 +6,9 @@ from player import Player
 class AI(Player):
     def __init__(self):
         super().__init__()
-        self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
+        self.wins = int()
+        self.chosen_gesture = ''
 
-    def choice(self):
-        self.ai_choice = str(random.choice(self.gestures()))
-        print(self.ai_choice)
+    def choose_gesture(self):
+        self.chosen_gestures = random.choice(self.gestures)
+        

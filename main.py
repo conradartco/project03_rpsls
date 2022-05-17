@@ -1,11 +1,9 @@
-# from game import Game
-from ai import AI
+from game import Game
 
-# test = Game()
-# test.random.choice(self.gestures)
 
-ai_player = AI()
-str(ai_player.choice())
+Game()
+
+
 
 
 

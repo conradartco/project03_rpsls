@@ -2,7 +2,7 @@
 class Player():
      
     def __init__(self):
-         self.gestures = []
+         self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
          self.choice = ''
-         self.wins = ''
+         self.wins = int()
          
