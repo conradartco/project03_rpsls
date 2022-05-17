@@ -3,28 +3,6 @@ from game import Game
 
 Game()
 
-
-
-
-
- 
-# make at least 10 commits
-
-# properly incorporate inheritance into my game
-
-# manage bad user input, reobtain input if necessary
-
-# store all gesture options in a list. Utilize this list within my code
-# (display gesture options, assign player a gesture, etc)
-
-# correct player should win based on choices made by player
-
-# game of RSPSLS should be best of 3 to decide winner
-
-# create the option for human vs. human and human vs. ai
-
-# ---
-
 # Classes
 # - Player(parent)
 #   Human(child)

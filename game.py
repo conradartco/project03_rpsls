@@ -1,7 +1,6 @@
 # runs game
 from ai import AI
 from human import Human
-from player import Player
 
 class Game():
     def __init__(self):
@@ -19,11 +18,17 @@ class Game():
         print("Welcome to Rock, Paper, Scissors, Lizard, Spock")
 
     def player_input(self):
-        player_input = input("How many players?\nEnter 1 for an AI opponent\nEnter 2 for Player vs. Player\nAnswer: ")
-        if player_input == '1':
-            self.set_ai()
-        else:
-            self.set_opponent()
+        self.player_choice = False
+        while self.player_choice is False:
+            player_input = input("How many players?\nEnter 1 for an AI opponent\nEnter 2 for Player vs. Player\nAnswer: ")
+            if player_input == '1':
+                self.set_ai()
+                self.player_choice = True
+            elif player_input == '2':
+                self.set_opponent()
+                self.player_choice = True
+            else:
+                print("Not a valid input, try again")
 
     def set_opponent(self):
         self.player_two = Human()
@@ -32,9 +37,10 @@ class Game():
         self.player_two = AI()
 
     def run_game(self):
-        # match will happen here
-        # check rock, check paper, etc after we require input
+        self.round_counts = int(0)
         while self.player_one.wins < 3 or self.player_two.wins < 3:
+            self.round_counts += 1
+            print(f"\nNow starting Round {int(self.round_counts)}")
             if self.player_one.wins == 3 or self.player_two.wins == 3:
                 break
             self.player_one.choose_gesture()
@@ -47,9 +53,9 @@ class Game():
             elif self.player_one.chosen_gesture == self.player_one.gestures[2]:
                 self.check_scissors()
             elif self.player_one.chosen_gesture == self.player_one.gestures[3]:
-                self.check_lizard()
+                    self.check_lizard()
             elif self.player_one.chosen_gesture == self.player_one.gestures[4]:
-                self.check_spock()
+                self.check_spock()  
         if self.player_one.wins == 3:
             print("Player One wins the game!")
         elif self.player_two.wins == 3:
@@ -119,24 +125,3 @@ class Game():
         else:
             print("Player Two wins")
             self.player_two.wins += 1
-
-    # GESTURES
-    # (Rock, Paper, Scissors, Lizard, Spock)
-
-    # GAME RULES
-    # Rock > Scissors
-    # Rock > Lizard
-    # Scissors > Paper
-    # Scissors > Lizard
-    # Paper > Rock
-    # Paper > Spock
-    # Lizard > Spock
-    # Lizard > Paper
-    # Spock > Rock
-    # Spock > Scissors
-
-    # rock = "0"
-    # scissors = 1
-    # lizard = 2
-    # paper = 3
-    # spock = 4
